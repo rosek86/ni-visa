@@ -1,0 +1,67 @@
+{
+  "name": "ni-visa",
+  "version": "0.0.1",
+  "description": "Node.js bindings for NI-VISA",
+  "main": "lib/src/index.js",
+  "types": "lib/src/index.d.ts",
+  "author": "Krzysztof Rosiński",
+  "maintainers": [
+    {
+      "name": "Krzysztof Rosiński",
+      "email": "rosek86@gmail.com",
+      "url": "https://github.com/rosek86"
+    }
+  ],
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "prebuild": "rm -fr lib",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "pretest": "npm run build",
+    "test": "node --test test/*/*.test.ts test/*/*/*.test.ts",
+    "prerelease": "rm -fr lib && npm run lint",
+    "release": "tsc -p tsconfig.release.json",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosek86/ni-visa"
+  },
+  "bugs": {
+    "url": "https://github.com/rosek86/ni-visa/issues"
+  },
+  "homepage": "https://github.com/rosek86/ni-visa#readme",
+  "keywords": [
+    "VISA",
+    "NI-VISA",
+    "SCPI",
+    "GPIB",
+    "VXI",
+    "PXI",
+    "LXI"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.1",
+    "@types/node": "^22.10.10",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "koffi": "^2.10.1"
+  }
+}
