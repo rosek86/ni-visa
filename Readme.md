@@ -40,11 +40,10 @@ try {
   const usbResources = resources.filter((resource) => resource.startsWith('USB'));
   console.log(`USB resources: ${usbResources}...`);
 
-  if (usbResources.length === 0) {
+  const selectedResource = usbResources[0];
+  if (!selectedResource) {
     throw new Error('No USB resources found');
   }
-
-  const selectedResource = usbResources[0];
 
   console.log(`Opening instrument: ${selectedResource}...`);
   const instr = rm.open(selectedResource);
