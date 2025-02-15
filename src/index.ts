@@ -1,2 +1,2 @@
-export * from './Visa.js';
-export * from './VisaTypes.js';
+export * from './Visa.ts';
+export * from './VisaTypes.ts';
