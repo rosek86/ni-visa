@@ -2,8 +2,8 @@
   "name": "ni-visa",
   "version": "0.0.1",
   "description": "Node.js bindings for NI-VISA",
-  "main": "lib/src/index.js",
-  "types": "lib/src/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Krzysztof Rosiński",
   "maintainers": [
     {
