@@ -1,6 +1,6 @@
 {
   "name": "ni-visa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node.js bindings for NI-VISA",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
