@@ -11,7 +11,7 @@
 
 ## Requirements
 
-- **RsVisa:** The library is built to work with RsVisa.  
+- **RsVisa:** The library is built to work with RsVisa.
 - **Custom Dynamic Library:** If RsVisa is not used, you can specify a custom path to a dynamic library that supports NI-VISA.
 - **Node.js 23+:** The examples and type stripping support require Node.js version 23 or later.
 
@@ -89,22 +89,22 @@ node example.ts
 
 ### VisaResourceManager
 
-* listResources(): string[]  
+- listResources(): string[]  
   Lists all available VISA resources.
-* open(resource: string): VisaInstrument  
+- open(resource: string): VisaInstrument  
   Opens a connection to the specified VISA resource.
-* close(): void  
+- close(): void  
   Closes the resource manager and cleans up resources.
 
 ### VisaInstrument
 
-* write(data: Buffer | string): void  
+- write(data: Buffer | string): void  
   Writes data to the instrument.
-* query(command: string): string  
+- query(command: string): string  
   Sends a query command to the instrument and returns its response.
-* queryBinary(command: string, bufferSize = 1024): Buffer  
+- queryBinary(command: string, bufferSize = 1024): Buffer  
   Sends a query command to the instrument and returns its response as a binary buffer.
-* close(): void  
+- close(): void  
   Closes the instrument connection.
 
 ## Contributing

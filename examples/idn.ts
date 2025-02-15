@@ -24,7 +24,6 @@ try {
     console.log('Closing instrument...');
     instr.close();
   }
-
 } catch (error) {
   console.error(error);
 } finally {
