@@ -19,7 +19,7 @@ try {
   const instr = rm.open(selectedResource);
 
   try {
-    await onInstrumentOpened(instr);
+    onInstrumentOpened(instr);
   } finally {
     console.log('Closing instrument...');
     instr.close();
@@ -31,7 +31,7 @@ try {
   rm.close();
 }
 
-async function onInstrumentOpened(instr: VisaInstrument) {
+function onInstrumentOpened(instr: VisaInstrument) {
   const response = instr.query('*IDN?');
   console.log(`\nInstrument ID: ${response}\n`);
 }
